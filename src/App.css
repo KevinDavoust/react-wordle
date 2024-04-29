@@ -1,0 +1,61 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cell {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.guessRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.yellow,
+.grey,
+.green {
+  color: #fff;
+}
+
+.yellow {
+  background-color: #e4b22c;
+}
+
+.green {
+  background-color: #1fa957;
+}
+
+.grey {
+  background-color: #989898;
+}
+
+.lightgrey {
+  background-color: #d0cece;
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 30px;
+
+  & .cell {
+    border-radius: 0.75rem;
+    border: none;
+    width: 10%;
+    margin: auto;
+    cursor: pointer;
+  }
+}
