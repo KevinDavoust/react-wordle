@@ -1,9 +1,9 @@
 /* eslint-disable react/require-default-props */
 import PropTypes from "prop-types";
 
-function Cell({ letter, color, guess, setGuess }) {
+function Cell({ letter, color, guess, setGuess, isWin }) {
   const handleClick = (letter) => {
-    if (guess.length < 5) {
+    if (!isWin && guess.length < 5) {
       setGuess(guess + letter);
     }
   };
@@ -17,8 +17,9 @@ function Cell({ letter, color, guess, setGuess }) {
 Cell.propTypes = {
   color: PropTypes.string,
   guess: PropTypes.string,
-  letter: PropTypes.string.isRequired,
+  letter: PropTypes.string,
   setGuess: PropTypes.func,
+  isWin: PropTypes.bool,
 };
 
 export default Cell;
